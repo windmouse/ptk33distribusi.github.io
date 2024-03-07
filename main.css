@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*===== Variable Define =====*/
+:root {
+    --primary-color: #cc1313;
+    --secondry-color: #660000;
+    --third-color: #f98169;
+    --white-color: #fff;
+    --text-color: #555;
+    --text-gray: #999;
+    --black-color: #000;
+    --primary-font: 'Roboto', sans-serif;
+    --secondry-font: 'Quicksand', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+}
+
+/*===== Custom Scrollbar =====*/
+
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+
+/*===== Custom CSS Design =====*/
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    text-transform: capitalize;
+    font-family: var(--secondry-font);
+    color: var(--primary-color);
+    line-height: 3rem;
+}
+
+h3 {
+    color: var(--white-color);
+    font-family: var(--secondry-font);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+h4 {
+    font-family: var(--secondry-font);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    color: var(--primary-color);
+    text-transform: capitalize;
+    font-family: var(--secondry-font);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    font-family: var(--primary-font);
+    /* Anda juga dapat menambahkan properti CSS lainnya sesuai kebutuhan */
+}
+
+
+p {
+
+    color: var(--black-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+
+
+
+.main-btn {
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    color: var(--white-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--white-color);
+    border: 0.1875rem solid var(--white-color);
+    color: var(--primary-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.white-btn {
+    padding: 0.625rem 1.875rem;
+    line-height: 25px;
+    background-color: var(--white-color);
+    border: 0.1875rem solid var(--white-color);
+    color: var(--text-color);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.white-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.wrapper {
+    padding-top: 8.25rem;
+    padding-bottom: 8.25rem;
+}
+
+.text-content {
+    width: 70%;
+    margin: auto;
+}
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2 {
+    color: var(--white-color);
+}
+
+
+/*===== Header Design =====*/
+
+.navigation-wrap {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.navigation-wrap .navbar-brand img {
+    height: 4rem;
+}
+
+.navigation-wrap .nav-item {
+    padding: 0 0.625rem;
+    transition: all 200ms linear;
+}
+
+.navigation-wrap .nav-item a:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-toggler:focus {
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.navigation-wrap .main-btn {
+    padding: 0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left: 0.625rem;
+}
+
+.navigation-wrap.scroll-on {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white-color);
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.09);
+    transition: all .15s ease-in-out 0s;
+}
+
+#topBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0px 0px 5px 1px rgba(19, 18, 18, 0.75);
+    z-index: 999;
+}
+
+/*===== top-banner Design =====*/
+
+.top-banner {
+    width: 100%;
+    background: url('img/bg.png') no-repeat center;
+    background-size: cover;
+    padding: 16.875rem 0 9.375rem;
+}
+
+
+/*===== counter Design =====*/
+
+.counter-section {
+    background-color: var(--primary-color);
+    padding: 2.5rem 0;
+}
+
+.counter-section p {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*===== about section Design =====*/
+
+.about-section {
+    width: 100%;
+    background: url('img/BG-5.jpg') no-repeat center;
+    background-size: cover;
+}
+
+
+.about-section .card,
+.about-section .card img {
+    border-radius: 0.625rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+}
+
+.about-section .text-sec {
+    padding-left: 2rem;
+}
+
+.vm-type {
+    padding-top: 3.25rem;
+}
+
+.about-section h2 {
+    font-size: 2.8rem;
+}
+
+.vm-type ul li {
+
+    color: var(--black-color);
+    line-height: 32px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.vm-type ul li h4 {
+    font-size: 1.7rem;
+}
+
+.vm-type ul .visi span {
+    font-style: italic;
+}
+
+.vm-type ul .visi::before {
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--primary-color);
+    font-size: 1.65rem;
+    font-family: "Font Awesome 5 Free";
+    content: '\f0eb';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.vm-type ul .misi {
+    margin-top: 1rem;
+}
+
+.vm-type ul .misi::before {
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-family: "Font Awesome 5 Free";
+    content: '\f135';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+/*===== Partner section Design =====*/
+.partner-section {
+    background-color: var(--primary-color);
+    padding: 2.5rem 0;
+}
+
+.partner-section h2 {
+    text-align: center;
+    padding: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--white-color) !important;
+}
+
+/* Slider */
+.partner-section .slick-slide {
+    margin: 0px 10px;
+}
+
+.partner-section .slick-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*===== Cover Area section Design =====*/
+
+.cover-section {
+    width: 100%;
+    background: url('img/BG-6.jpg') no-repeat center;
+    background-size: cover;
+    padding: 2.5rem 0;
+}
+
+.cover-section h4 {
+    text-align: center;
+    padding: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.cover-section img {
+    height: 100%;
+    width: 900px;
+    border-radius: 10px;
+}
+
+
+
+/*===== Contact Us section Design =====*/
+.contact-section {
+    background-color: var(--primary-color);
+    padding: 2.5rem 0;
+
+}
+
+
+
+.contact-section h2 {
+    text-align: center;
+    padding: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--white-color) !important;
+}
+
+.contact-section h4 {
+    color: var(--white-color) !important;
+}
+
+.contact-section .container .row h2 {
+    color: var(--white-color) !important;
+}
+
+.contact-type {
+    padding-top: 3.25rem;
+}
+
+.contact-type ul li {
+    font-size: 1rem;
+    color: var(--white-color);
+    line-height: 32px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.contact-type ul li a {
+    color: var(--white-color);
+}
+
+.contact-type ul li a:hover {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.contact-type ul .instagram::before {
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--white-color);
+    font-size: 1.25rem;
+    font-family: "Font Awesome 5 Brands";
+    content: '\f16d';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.contact-type ul .email::before {
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--white-color);
+    font-size: 1.25rem;
+    font-family: "Font Awesome 5 Free";
+    content: '\f0e0';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.contact-type ul .telpon::before {
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--white-color);
+    font-size: 1.25rem;
+    font-family: "Font Awesome 5 Free";
+    content: '\f879';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+
+/*===== Contact Us Career section Design =====*/
+.contactcareer-section {
+    background-color: var(--white-color);
+    padding: 2.5rem 0;
+}
+
+.contactcareer-section h2 {
+    text-align: center;
+    padding: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color) !important;
+}
+
+.contactcareer-section h4 {
+    color: var(--primary-color) !important;
+}
+
+.contactcareer-section .container .row h2 {
+    color: var(--primary-color) !important;
+}
+
+.contactcareer-type {
+    padding-top: 3.25rem;
+}
+
+.contactcareer-type ul li {
+    font-size: 1rem;
+    color: var(--primary-color);
+    line-height: 32px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.contactcareer-type ul li a {
+    color: var(--primary-color);
+}
+
+.contactcareer-type ul li a:hover {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.contactcareer-type ul .instagram::before {
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-family: "Font Awesome 5 Brands";
+    content: '\f16d';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.contactcareer-type ul .email::before {
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-family: "Font Awesome 5 Free";
+    content: '\f0e0';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.contactcareer-type ul .telpon::before {
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-family: "Font Awesome 5 Free";
+    content: '\f879';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+
+
+footer {
+    background-color: var(--secondry-color);
+}
+
+/* Admin section design */
+.admin-section {
+    background-color: var(--primary-color);
+    padding: 2.5rem 0;
+}
+
+.admin-section p {
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+.admin-section h4 {
+    text-align: center;
+    padding: 0.1rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--white-color);
+}
+
+.admin-section img {
+    height: 100%;
+    width: 900px;
+    border-radius: 10px;
+}
+
+/* Lowongan section design */
+.lowongan-section {
+    background-color: var(--primary-color);
+    padding: 2.5rem 0;
+}
+
+.lowongan-section p {
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+.lowongan-section h4 {
+    text-align: center;
+    padding: 0.1rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: var(--white-color);
+}
+
+.lowongan-section img {
+    height: 100%;
+    width: 900px;
+    border-radius: 10px;
+}
+
+/* < !--===============Responsive Design=================--> */
+@media (max-width:1024px) {
+
+    /* about section */
+
+}
+
+@media (max-width: 991px) {
+
+    /* navbar brand */
+    .navigation-wrap .navbar-brand img {
+        height: 3.8125rem;
+    }
+
+    .navigation-wrap {
+        text-align: center;
+        background-color: var(--white-color);
+    }
+
+    .navigation-wrap .nav-link {
+        line-height: 1.875rem;
+    }
+
+    /* Banner Design */
+    .top-banner {
+        padding: 9.375rem 0 9.375rem;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    /* custom css */
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    h4 {
+        line-height: 3rem;
+    }
+
+    /* top banner */
+    .top-banner {
+        background: url('img/bg.png') no-repeat center;
+        background-size: cover;
+        /* Ubah ke 'contain' untuk mengurangi ukuran latar belakang */
+        padding: 16.875rem 0 9.375rem;
+    }
+
+}
+
+@media (max-width:330px) {}
+
+.card {
+    margin-bottom: 500px;
+    /* Atur jarak kosong di bawah card */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #cc1313;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+
+/*  CAREER --> */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    /* Warna merah */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    justify-content: center;
+    /* Mengatur tombol di tengah horizontal */
+    align-items: center;
+    /* Mengatur tombol di tengah vertikal */
+}
+
+.btn:hover {
+    background-color: #fff;
+    /* Warna merah yang lebih gelap saat dihover */
+    color: var(--primary-color);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    /* Warna dasar putih */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.popup textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin-top: 10px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #aaa;
+}
+
+.popup .close:hover {
+    color: #555;
+}
+
+@media (max-width:330px) {}
